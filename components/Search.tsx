@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     padding: 4,
     backgroundColor: '#313131',
     borderRadius: 16,
+    marginBottom: 100,
   },
   inputView: {
     flexDirection: 'row',
