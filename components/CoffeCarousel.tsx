@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 
 const CoffeCarousel = () => {
   const [selectedCoffee, selectCoffee] = useState(0);
-  const coffies = ['Капучино', 'Мокачино', 'Латте', 'Американо'];
+  const coffies = ['Капучино', 'Мокачино', 'Латте', 'Американо', 'Раф'];
 
   return (
     <View>
