@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 const Promo = () => {
   return (
-    <View style={{ paddingHorizontal: 30 }}>
+    <View style={{ paddingHorizontal: 20 }}>
       <View style={styles.container}>
         <Image
           source={require('../assets/promo.jpg')}

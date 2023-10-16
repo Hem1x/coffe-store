@@ -6,7 +6,7 @@ import {
   ImageBackground,
   StyleSheet,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
 const Welcome = () => {
   const navigation = useNavigation();
@@ -25,7 +25,9 @@ const Welcome = () => {
 
         <TouchableOpacity
           style={styles.btn}
-          onPress={() => navigation.navigate('shop')}>
+          onPress={() =>
+            navigation.dispatch(CommonActions.navigate('shop'))
+          }>
           <Text style={styles.btnText}>Попробовать</Text>
         </TouchableOpacity>
       </ImageBackground>

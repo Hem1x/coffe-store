@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
+import Header from '../components/Header';
+import FavoriteList from '../components/FavoriteList';
 
 const Favorite = () => {
   return (
     <View>
-      <Text>Favorite</Text>
+      <Header title="Избранное" />
+      <FavoriteList />
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default Favorite;

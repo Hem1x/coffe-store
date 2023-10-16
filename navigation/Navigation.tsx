@@ -12,40 +12,41 @@ const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
   return (
-    <>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen
-          name="shop"
-          component={Shop}
-          options={{
-            tabBarLabel: 'Главная',
-            tabBarIcon: ({ color, size }) => (
-              <Entypo name="home" size={size} color={color} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="order"
-          component={Order}
-          options={{
-            tabBarLabel: 'Ваш кофе',
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome name="coffee" size={size} color={color} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="favorite"
-          component={Favorite}
-          options={{
-            tabBarLabel: 'Избранное',
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome name="heart" size={size} color={color} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-    </>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen
+        name="shop"
+        component={Shop}
+        options={{
+          tabBarLabel: 'Главная',
+          tabBarActiveTintColor: '#C67C4E',
+          tabBarIcon: ({ color, size }) => (
+            <Entypo name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="order"
+        component={Order}
+        options={{
+          tabBarLabel: 'Ваш кофе',
+          tabBarActiveTintColor: '#C67C4E',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="coffee" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="favorite"
+        component={Favorite}
+        options={{
+          tabBarLabel: 'Избранное',
+          tabBarActiveTintColor: '#C67C4E',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="heart" size={size} color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 

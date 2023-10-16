@@ -7,7 +7,7 @@ const CoffeeList = () => {
   return (
     <View
       style={{
-        paddingHorizontal: 30,
+        paddingHorizontal: 20,
         marginTop: 28,
         justifyContent: 'space-between',
         flexDirection: 'row',

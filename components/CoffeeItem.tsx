@@ -2,14 +2,17 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { ICoffeeItem } from '../models';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 interface CoffeeItemProps {
   details: ICoffeeItem;
 }
 
 const CoffeeItem: React.FC<CoffeeItemProps> = ({ details }) => {
+  const navigation = useNavigation();
+
   return (
-    <View
+    <TouchableOpacity
       style={{
         marginBottom: 16,
         padding: 4,
@@ -58,7 +61,11 @@ const CoffeeItem: React.FC<CoffeeItemProps> = ({ details }) => {
           {details.category}
         </Text>
         <Text
-          style={{ marginBottom: 8, color: '#9B9B9B', fontWeight: '400' }}>
+          style={{
+            marginBottom: 8,
+            color: '#9B9B9B',
+            fontWeight: '400',
+          }}>
           {details.name}
         </Text>
 
@@ -86,7 +93,7 @@ const CoffeeItem: React.FC<CoffeeItemProps> = ({ details }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

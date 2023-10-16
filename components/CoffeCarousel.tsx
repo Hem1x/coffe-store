@@ -27,7 +27,7 @@ const CoffeCarousel = () => {
               {
                 backgroundColor:
                   selectedCoffee === index ? '#C67C4E' : 'white',
-                marginLeft: index === 0 ? 30 : 0,
+                marginLeft: index === 0 ? 20 : 0,
                 marginRight: index === coffies.length - 1 ? 30 : 0,
               },
             ]}>

@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  Image,
-  SafeAreaView,
-  FlatList,
-  ScrollView,
-} from 'react-native';
+import { View, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
 import UserData from '../components/UserData';
 import Search from '../components/Search';
@@ -15,11 +8,6 @@ import CoffeCarousel from '../components/CoffeCarousel';
 import CoffeeList from '../components/CoffeeList';
 
 const Shop = () => {
-  const text = [
-    1, 34, 23, 5, 64, 7, 56, 9870, 9, 89, 97, 886, 544, 3, 2, 2, 5436545,
-    7, 54, 23, 534, 6, 56, 8, 67, 89, 679,
-  ];
-
   return (
     <SafeAreaView style={{ backgroundColor: '#F9F9F9', flex: 1 }}>
       <ScrollView>
@@ -29,7 +17,7 @@ const Shop = () => {
           end={{ x: 1, y: 0 }}>
           <View
             style={{
-              paddingHorizontal: 30,
+              paddingHorizontal: 20,
               paddingTop: 40,
             }}>
             <UserData />
