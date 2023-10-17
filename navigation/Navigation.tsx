@@ -6,11 +6,12 @@ import Order from '../screens/Order';
 import Favorite from '../screens/Favorite';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import CoffeeDetails from '../screens/CoffeeDetails';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const Navigation = () => {
+const HomeScreen = () => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
@@ -47,6 +48,18 @@ const Navigation = () => {
         }}
       />
     </Tab.Navigator>
+  );
+};
+
+const Navigation = () => {
+  return (
+    <Stack.Navigator
+      initialRouteName="Welcome"
+      screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="CoffeeDetails" component={CoffeeDetails} />
+    </Stack.Navigator>
   );
 };
 

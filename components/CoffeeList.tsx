@@ -1,7 +1,8 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { coffeeData } from '../mock/data';
 import CoffeeItem from './CoffeeItem';
+import { useRoute } from '@react-navigation/native';
 
 const CoffeeList = () => {
   return (

@@ -26,7 +26,7 @@ const Welcome = () => {
         <TouchableOpacity
           style={styles.btn}
           onPress={() =>
-            navigation.dispatch(CommonActions.navigate('shop'))
+            navigation.dispatch(CommonActions.navigate('HomeScreen'))
           }>
           <Text style={styles.btnText}>Попробовать</Text>
         </TouchableOpacity>

@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { ICoffeeItem } from '../models';
 import { AntDesign } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
 interface CoffeeItemProps {
   details: ICoffeeItem;
@@ -13,6 +13,13 @@ const CoffeeItem: React.FC<CoffeeItemProps> = ({ details }) => {
 
   return (
     <TouchableOpacity
+      onPress={() =>
+        navigation.dispatch(
+          CommonActions.navigate('CoffeeDetails', {
+            details,
+          }),
+        )
+      }
       style={{
         marginBottom: 16,
         padding: 4,

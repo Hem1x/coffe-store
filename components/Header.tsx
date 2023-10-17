@@ -1,7 +1,11 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import { Feather, Ionicons } from '@expo/vector-icons';
+import {
+  CommonActions,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
 
 interface HeaderProps {
   title: string;
@@ -9,6 +13,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   const navigation = useNavigation();
+  const router = useRoute();
 
   return (
     <View style={styles.container}>
@@ -22,7 +27,13 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           />
         </TouchableOpacity>
         <Text style={styles.text}>{title}</Text>
-        <Text></Text>
+        {router.name === 'CoffeeDetails' ? (
+          <TouchableOpacity>
+            <Feather name="heart" size={24} color="#2F2D2C" />
+          </TouchableOpacity>
+        ) : (
+          <Text></Text>
+        )}
       </View>
     </View>
   );
